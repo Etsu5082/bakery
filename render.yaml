@@ -1,0 +1,14 @@
+services:
+  # バックエンドAPIサービス
+  - type: web
+    name: bakery-cost-calculator-api
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install
+    startCommand: npm run server
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
